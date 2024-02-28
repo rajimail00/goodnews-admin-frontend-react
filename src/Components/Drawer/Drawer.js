@@ -13,7 +13,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Dashboard from '../../Dashboard/Dashboard';
 import HomeIcon from '@mui/icons-material/Home';
 import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
 import ArticleIcon from '@mui/icons-material/Article';
@@ -22,10 +21,13 @@ import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import { Avatar } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import RoutePages from '../../Routes/Routes';
 
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
+    const navigate = useNavigate();
     const { window } = props;
     const [mobileOpen, setMobileOpen] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
@@ -51,7 +53,7 @@ function ResponsiveDrawer(props) {
             <Divider />
             <List>
                 <ListItem disablePadding>
-                    <ListItemButton>
+                    <ListItemButton onClick={()=>{navigate(`/`)}}>
                         <ListItemIcon>
                             <HomeIcon />
                         </ListItemIcon>
@@ -59,7 +61,7 @@ function ResponsiveDrawer(props) {
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                    <ListItemButton>
+                    <ListItemButton  onClick={()=>{navigate(`/category`)}}>
                         <ListItemIcon>
                             <DynamicFeedIcon />
                         </ListItemIcon>
@@ -67,7 +69,7 @@ function ResponsiveDrawer(props) {
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                    <ListItemButton>
+                    <ListItemButton  onClick={()=>{navigate(`/news`)}}>
                         <ListItemIcon>
                             <ArticleIcon />
                         </ListItemIcon>
@@ -75,7 +77,7 @@ function ResponsiveDrawer(props) {
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                    <ListItemButton>
+                    <ListItemButton  onClick={()=>{navigate(`/ads`)}}>
                         <ListItemIcon>
                             <AdsClickIcon />
                         </ListItemIcon>
@@ -83,7 +85,7 @@ function ResponsiveDrawer(props) {
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                    <ListItemButton>
+                    <ListItemButton  onClick={()=>{navigate(`/`)}}>
                         <ListItemIcon>
                             <CloudUploadIcon />
                         </ListItemIcon>
@@ -192,7 +194,7 @@ function ResponsiveDrawer(props) {
                 }}
             >
                 <Toolbar />
-                <Dashboard />
+                <RoutePages />
             </Box>
         </Box>
     );

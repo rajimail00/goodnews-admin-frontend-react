@@ -1,4 +1,6 @@
 @import "./Styles/Dashboard.css";
+@import "./Styles/NewCategory.css";
+@import "./Styles/category.css";
 
 .App {
   min-height: 100vh;

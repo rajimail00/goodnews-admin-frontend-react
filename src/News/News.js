@@ -1,15 +1,9 @@
 import React from 'react'
-import { Avatar, Box, Button, Card, Fab, FormControl, Grid, IconButton, InputAdornment, InputLabel, MenuItem, OutlinedInput, Select, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 import styled from '@emotion/styled';
-import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
-import ArticleIcon from '@mui/icons-material/Article';
-import AdsClickIcon from '@mui/icons-material/AdsClick';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import InfoIcon from '@mui/icons-material/Info';
-import SearchIcon from '@mui/icons-material/Search';
-import AddIcon from '@mui/icons-material/Add';
 import { CheckBox } from '@mui/icons-material';
+import SearchIcon from '@mui/icons-material/Search';
+import { Avatar, Box, Button, Card, FormControl, IconButton, InputAdornment, InputLabel, MenuItem, OutlinedInput, Select, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
 
 const Item = styled(Card)(({ theme }) => ({
   backgroundColor: "#fff",
@@ -17,121 +11,21 @@ const Item = styled(Card)(({ theme }) => ({
   marginBottom: 20,
 }));
 
-function Dashboard() {
-
-  const fabStyle = {
-    backgroundColor: 'black',
-    color: 'white',
-    marginBottom: 10
-  }
-
+function News() {
   return (
     <div>
       <Box>
-        <Typography variant="h4" gutterBottom>
-          Dashboard
+        <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold' }}>
+          News
         </Typography>
-      </Box>
-      <Box sx={{ mb: 5 }}>
-        <Card sx={{ boxShadow: 'none', borderRadius: 5, p: 3 }}>
-          <Box className="section-overview-header-flex">
-            <div className='overview-header-first-icon'></div>
-            <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-              Overview
-            </Typography>
-          </Box>
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={12} md={4}>
-              <Card fullWidth={true} sx={{ backgroundColor: "#EAF6EF", borderRadius: 5, boxShadow: 'none' }}>
-                <Box sx={{ p: 5 }}>
-                  <Fab disabled style={fabStyle}>
-                    <DynamicFeedIcon />
-                  </Fab>
-                  <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: 1 }}>
-                    <Typography gutterBottom>
-                      Category
-                    </Typography>
-                    <InfoIcon sx={{ color: 'black' }} />
-                  </Box>
-                  <Typography variant="h3" component="div" gutterBottom>
-                    128k
-                  </Typography>
-                  <Card sx={{ boxShadow: 'none', borderRadius: 1, width: 'fit-content', display: 'flex', flexDirection: 'row', gap: 1, px: 2, flexWrap: 'wrap' }}>
-                    <ArrowUpwardIcon sx={{ color: '#83BF6E' }} />
-                    <Typography sx={{ color: '#83BF6E' }}>
-                      37.5%
-                    </Typography>
-                    <Typography >
-                      this week
-                    </Typography>
-                  </Card>
-                </Box>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={12} md={4}>
-              <Card fullWidth={true} sx={{ backgroundColor: "#E9F6FC", borderRadius: 5, boxShadow: 'none' }}>
-                <Box sx={{ p: 5 }}>
-                  <Fab disabled style={fabStyle}>
-                    <ArticleIcon />
-                  </Fab>
-                  <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: 1 }}>
-                    <Typography gutterBottom>
-                      News
-                    </Typography>
-                    <InfoIcon sx={{ color: 'black' }} />
-                  </Box>
-                  <Typography variant="h3" component="div" gutterBottom>
-                    128k
-                  </Typography>
-                  <Card sx={{ boxShadow: 'none', borderRadius: 1, width: 'fit-content', display: 'flex', flexDirection: 'row', gap: 1, px: 2, flexWrap: 'wrap' }}>
-                    <ArrowDownwardIcon sx={{ color: '#FF6A55' }} />
-                    <Typography sx={{ color: '#FF6A55' }}>
-                      37.5%
-                    </Typography>
-                    <Typography >
-                      this week
-                    </Typography>
-                  </Card>
-                </Box>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={12} md={4}>
-              <Card fullWidth={true} sx={{ backgroundColor: "#F0ECFD", borderRadius: 5, boxShadow: 'none' }}>
-                <Box sx={{ p: 5 }}>
-                  <Fab disabled style={fabStyle}>
-                    <AdsClickIcon />
-                  </Fab>
-                  <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: 1 }}>
-                    <Typography gutterBottom>
-                      Ads
-                    </Typography>
-                    <InfoIcon sx={{ color: 'black' }} />
-                  </Box>
-                  <Typography variant="h3" component="div" gutterBottom>
-                    128k
-                  </Typography>
-                  <Card sx={{ boxShadow: 'none', borderRadius: 1, width: 'fit-content', display: 'flex', flexDirection: 'row', gap: 1, px: 2, flexWrap: 'wrap' }}>
-                    <ArrowUpwardIcon sx={{ color: '#83BF6E' }} />
-                    <Typography sx={{ color: '#83BF6E' }}>
-                      37.5%
-                    </Typography>
-                    <Typography >
-                      this week
-                    </Typography>
-                  </Card>
-                </Box>
-              </Card>
-            </Grid>
-          </Grid>
-        </Card>
       </Box>
       <Box>
         <TableContainer component={Item}>
           <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: 1, alignItems: 'center', justifyContent: 'space-between' }}>
             <Box className="section-products-header-flex">
-              <div className='overview-header-second-icon'></div>
+              <div className='overview-header-first-icon'></div>
               <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                Products
+                News
               </Typography>
               <FormControl variant="outlined">
                 <InputLabel htmlFor="outlined-adornment-search">Search</InputLabel>
@@ -156,11 +50,11 @@ function Dashboard() {
             <Box className="actions-flex">
               <Box>
                 <FormControl fullWidth sx={{ width: 150 }}>
-                  <InputLabel id="demo-simple-select-label">Market</InputLabel>
+                  <InputLabel id="demo-simple-select-label">Most Recent</InputLabel>
                   <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    label="Market"
+                    label="Most Recent"
                     size='small'
                   >
                     <MenuItem value="">Select</MenuItem>
@@ -169,11 +63,11 @@ function Dashboard() {
               </Box>
               <Box>
                 <FormControl fullWidth sx={{ width: 150 }}>
-                  <InputLabel id="demo-simple-select-label">Viewers</InputLabel>
+                  <InputLabel id="demo-simple-select-label">Category</InputLabel>
                   <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    label="Viewers"
+                    label="Category"
                     size='small'
                     sx={{ backgroundColor: '#F4F4F4' }}
                   >
@@ -181,12 +75,15 @@ function Dashboard() {
                   </Select>
                 </FormControl>
               </Box>
+              <Box>
+                <Button variant='contained' style={{ backgroundColor: "#2A85FF", color: "white",borderRadius:10 }}><AddIcon />Create</Button>
+              </Box>
             </Box>
           </Box>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell ><CheckBox checked={false} /></TableCell>
+                <TableCell ><CheckBox /></TableCell>
                 <TableCell align="left"><span className='table-header'>Id</span></TableCell>
                 <TableCell align="left"><span className='table-header'>Post</span></TableCell>
                 <TableCell align="left"><span className='table-header'>Language</span></TableCell>
@@ -255,9 +152,9 @@ function Dashboard() {
             </TableBody>
           </Table>
         </TableContainer>
-      </Box>
-    </div>
+      </Box >
+    </div >
   )
 }
 
-export default Dashboard;
+export default News;

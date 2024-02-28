@@ -1,0 +1,38 @@
+.new-category-view-icon {
+    background-color: #FFBC99;
+    width: 15px;
+    height: 30px;
+    border-radius: 5px
+}
+
+.section-new-category-add-information-header-flex {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.new-category-add-information-icon {
+    width: 15px;
+    background-color: #35E4CA;
+    height: 30px;
+    border-radius: 5px
+}
+
+.new-category-padding {
+    padding: 20px;
+}
+
+.new-category-font-bold {
+    font-weight: bold
+}
+
+.new-category-switch-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px
+}

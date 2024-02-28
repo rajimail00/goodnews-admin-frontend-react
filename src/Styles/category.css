@@ -1,0 +1,24 @@
+.category-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.section-category-header-flex {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.category-header-icon {
+    width: 15px;
+    background-color: #CABDFF;
+    height: 30px;
+    border-radius: 5px
+}
