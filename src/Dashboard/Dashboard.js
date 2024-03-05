@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar, Box, Button, Card, Fab, FormControl, Grid, IconButton, InputAdornment, InputLabel, MenuItem, OutlinedInput, Select, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
+import {Avatar, Box, Card, Fab, FormControl, Grid, IconButton, InputAdornment, InputLabel, MenuItem, OutlinedInput, Select, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 import styled from '@emotion/styled';
 import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
 import ArticleIcon from '@mui/icons-material/Article';
@@ -8,9 +8,8 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import InfoIcon from '@mui/icons-material/Info';
 import SearchIcon from '@mui/icons-material/Search';
-import AddIcon from '@mui/icons-material/Add';
 import { CheckBox } from '@mui/icons-material';
-
+import TitlebarImageList from '../Components/TitlebarImageList/TitlebarImageList'
 const Item = styled(Card)(({ theme }) => ({
   backgroundColor: "#fff",
   boxShadow: 'none',
@@ -24,7 +23,7 @@ function Dashboard() {
     color: 'white',
     marginBottom: 10
   }
-
+  
   return (
     <div>
       <Box>
@@ -125,7 +124,8 @@ function Dashboard() {
           </Grid>
         </Card>
       </Box>
-      <Box>
+      <Box sx={{ mb: 5 }}>
+      <Card sx={{ boxShadow: 'none', borderRadius: 5, p: 3 }}>
         <TableContainer component={Item}>
           <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: 1, alignItems: 'center', justifyContent: 'space-between' }}>
             <Box className="section-products-header-flex">
@@ -254,8 +254,114 @@ function Dashboard() {
               </TableRow>
             </TableBody>
           </Table>
-        </TableContainer>
+        </TableContainer></Card>
       </Box>
+      
+      <Grid container spacing={2}>
+  <Grid item xs={12} sm={6} md={4}>
+    <Card sx={{ boxShadow: 'none', borderRadius: 5, p: 3 }}>
+    <Box className="section-overview-header-flex">
+            <div className='overview-header-first-icon'></div>
+            <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+             Recent Ads
+            </Typography>
+          </Box>
+          <TitlebarImageList/>
+
+    </Card>
+  </Grid>
+  <Grid item xs={12} sm={6} md={8}>
+    <Card sx={{ boxShadow: 'none', borderRadius: 5, p: 3 }}>
+    <Box className="section-overview-header-flex">
+            <div className='overview-header-first-icon'></div>
+            <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+             Top Views
+            </Typography>
+          </Box>
+        
+        <TableContainer component={Item}>
+         
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                
+               
+                <TableCell align="left"><span className='table-header'>Post</span></TableCell>
+               
+                <TableCell align="left"><span className='table-header'>Category</span></TableCell>
+                
+                <TableCell align="left"><span className='table-header'>Pageview</span></TableCell>
+                
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                
+               
+                <TableCell align="left">
+                  <Box className="post-avatar-flex">
+                    <Avatar alt="profile" src="" />
+                    <Typography variant="subtitle1" component="div" sx={{ color: 'grey' }}>
+                      ന്യൂയോര്‍ക്ക്:1,000 വർഷത്തിലധികം പഴക്കമുള്ള, ലോകത്തിലെ ഏറ്റവും പഴക്കമേറിയ ഹീബ്രു ബൈബിള്‍ ന്യൂയോർക്കിൽ ലേലത്തിന്.
+                    </Typography>
+                  </Box>
+                </TableCell>              
+               
+                <TableCell align="left">Matrimony</TableCell>
+                
+                <TableCell align="left">27</TableCell>
+               
+                
+              </TableRow>
+              <TableRow
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                
+               
+                <TableCell align="left">
+                  <Box className="post-avatar-flex">
+                    <Avatar alt="profile" src="" />
+                    <Typography variant="subtitle1" component="div" sx={{ color: 'grey' }}>
+                      ന്യൂയോര്‍ക്ക്:1,000 വർഷത്തിലധികം പഴക്കമുള്ള, ലോകത്തിലെ ഏറ്റവും പഴക്കമേറിയ ഹീബ്രു ബൈബിള്‍ ന്യൂയോർക്കിൽ ലേലത്തിന്.
+                    </Typography>
+                  </Box>
+                </TableCell>              
+               
+                <TableCell align="left">Matrimony</TableCell>
+                
+                <TableCell align="left">27</TableCell>
+               
+                
+              </TableRow>
+              <TableRow
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                
+               
+                <TableCell align="left">
+                  <Box className="post-avatar-flex">
+                    <Avatar alt="profile" src="" />
+                    <Typography variant="subtitle1" component="div" sx={{ color: 'grey' }}>
+                      ന്യൂയോര്‍ക്ക്:1,000 വർഷത്തിലധികം പഴക്കമുള്ള, ലോകത്തിലെ ഏറ്റവും പഴക്കമേറിയ ഹീബ്രു ബൈബിള്‍ ന്യൂയോർക്കിൽ ലേലത്തിന്.
+                    </Typography>
+                  </Box>
+                </TableCell>              
+               
+                <TableCell align="left">Matrimony</TableCell>
+                
+                <TableCell align="left">27</TableCell>
+               
+                
+              </TableRow>
+            </TableBody>
+          </Table>
+        </TableContainer></Card>
+  
+  </Grid>
+</Grid>
+    
     </div>
   )
 }
